@@ -1,8 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Card from "../components/ui/Card";
 import Input from "../components/ui/Input";
-import { useState } from "react";
 import Button from "../components/ui/Button";
+import Modal from "../components/ui/Modal";
 
 const Wrap = styled.div`
   padding: 32px;
@@ -18,9 +19,14 @@ const Row = styled.div`
 
 function App() {
   const [name, setName] = useState<string>("");
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
   return (
     <Wrap>
+      <Modal open={openModal} title={name} onClose={() => setOpenModal(false)}>
+        <h4>Modal has been opened!</h4>
+      </Modal>
+
       <Card>
         <h1 style={{ marginTop: 0 }}>Medical Dashboard</h1>
         <p style={{ color: "rgba(231, 238, 252, 0.75)" }}>
@@ -49,6 +55,10 @@ function App() {
           </Button>
           <Button variant="danger" onClick={() => alert("Delete action!")}>
             Delete
+          </Button>
+
+          <Button variant="primary" onClick={() => setOpenModal(true)}>
+            OPEN MODAL
           </Button>
         </Row>
       </Card>
