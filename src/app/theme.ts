@@ -4,9 +4,11 @@ export const theme = {
     bg: "#0b1220",
     surface: "#121a2b",
     text: "#e7eefc",
+    textdark: "#000",
     muted: "#a9b4cc",
     border: "rgba(255, 255, 255, 0.12)",
     primary: "#4f8cff",
+    secondary: "#2fa729",
     danger: "#ff4f6d",
   },
   space: {
