@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "./AppLayout";
 import DashboardPage from "../features/dashboard/DashboardPage";
 import PatientsPage from "../features/patients/PatientsPage";
+import AppointmentsPage from "../features/appointments/AppointmentsPage";
+import AuditPage from "../features/audit/AuditPage";
 
 const routes = createBrowserRouter([
   {
@@ -40,7 +42,7 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PatientsPage />,
+        element: <AppointmentsPage />,
       },
     ],
   },
@@ -50,7 +52,7 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PatientsPage />,
+        element: <AuditPage />,
       },
     ],
   },
