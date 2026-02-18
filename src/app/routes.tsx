@@ -1,5 +1,7 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import AppLayout from "./AppLayout";
+
+import LoginPage from "../features/login/LoginPage";
 import DashboardPage from "../features/dashboard/DashboardPage";
 import PatientsPage from "../features/patients/PatientsPage";
 import AppointmentsPage from "../features/appointments/AppointmentsPage";
@@ -7,53 +9,17 @@ import AuditPage from "../features/audit/AuditPage";
 
 const routes = createBrowserRouter([
   {
-    path: "/",
-    element: <AppLayout />,
-    children: [
-      {
-        index: true,
-        element: <DashboardPage />,
-      },
-    ],
+    path: "/login",
+    element: <LoginPage />,
   },
   {
-    path: "/dashboard",
     element: <AppLayout />,
     children: [
-      {
-        index: true,
-        element: <DashboardPage />,
-      },
-    ],
-  },
-  {
-    path: "/patients",
-    element: <AppLayout />,
-    children: [
-      {
-        index: true,
-        element: <PatientsPage />,
-      },
-    ],
-  },
-  {
-    path: "/appointments",
-    element: <AppLayout />,
-    children: [
-      {
-        index: true,
-        element: <AppointmentsPage />,
-      },
-    ],
-  },
-  {
-    path: "/audit",
-    element: <AppLayout />,
-    children: [
-      {
-        index: true,
-        element: <AuditPage />,
-      },
+      { path: "/", element: <Navigate to="/dashboard" replace /> },
+      { path: "/dashboard", element: <DashboardPage /> },
+      { path: "/patients", element: <PatientsPage /> },
+      { path: "/appointments", element: <AppointmentsPage /> },
+      { path: "/audit", element: <AuditPage /> },
     ],
   },
 ]);
