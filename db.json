@@ -1,0 +1,40 @@
+{
+  "patients": [
+    {
+      "id": "1",
+      "name": "Alex Chen",
+      "dob": "1992-03-14",
+      "phone": "416-555-0101",
+      "flags": ["Peanut allergy"],
+      "notes": "Prefers morning appointments"
+    },
+    {
+      "id": "5cc6",
+      "name": "Sam Lee",
+      "dob": "1988-11-02",
+      "phone": "416-555-0112",
+      "flags": ["Asthma"],
+      "notes": "N/A"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "patientId": 1,
+      "dateTime": "2026-02-24T10:30:00",
+      "provider": "Dr. Patel",
+      "reason": "Intake",
+      "status": "Scheduled"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "1",
+      "entityType": "patient",
+      "entityId": 1,
+      "action": "created",
+      "timestamp": "2026-02-13T12:00:00",
+      "actor": "system"
+    }
+  ]
+}

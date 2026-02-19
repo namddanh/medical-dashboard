@@ -5,7 +5,7 @@ import Button from "../components/ui/Button";
 
 const Shell = styled.div`
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 175px 1fr;
   grid-template-rows: 56px 1fr;
   height: 100vh;
 `;

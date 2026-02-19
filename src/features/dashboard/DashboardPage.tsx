@@ -30,8 +30,10 @@ const DashboardPage = () => {
         <h4>Modal has been opened!</h4>
       </Modal>
 
-      <Card>
-        <h1 style={{ marginTop: 0 }}>Medical Dashboard</h1>
+      <Card
+        style={{ padding: "10px", textAlign: "center", borderRadius: "10px" }}
+      >
+        <h2 style={{ marginTop: 0 }}>Medical Dashboard</h2>
         <p style={{ color: "rgba(231, 238, 252, 0.75)" }}>
           This is just a quick UI kit check.
         </p>

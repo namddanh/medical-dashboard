@@ -4,6 +4,7 @@ type Variant = "primary" | "secondary" | "danger";
 
 const Button = styled.button<{ variant?: Variant }>`
   border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 5px;
   padding: ${({ theme }) => `${theme.space[2]} ${theme.space[4]}`};
   cursor: pointer;
   background: ${({ theme }) => theme.colors.surface};
