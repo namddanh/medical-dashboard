@@ -3,14 +3,16 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./app/theme";
 import { GlobalStyle } from "./app/GlobalStyle.ts";
-import { RouterProvider } from "react-router-dom";
-import routes from "./app/routes.tsx";
+import { AuthProvider } from "./contexts/AuthContext.tsx";
+import App from "./app/App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <RouterProvider router={routes} />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </ThemeProvider>
   </StrictMode>,
 );

@@ -1,5 +1,7 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { useAuth } from "../contexts/AuthContext";
+import Button from "../components/ui/Button";
 
 const Shell = styled.div`
   display: grid;
@@ -43,11 +45,23 @@ const LinkItem = styled(NavLink)`
 `;
 
 const AppLayout = () => {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <Shell>
       {/* NOTE TOP NAVIGATION */}
       <TopNav>
         <h4>Top Nav - AppLayout</h4>
+
+        <Button
+          onClick={() => {
+            logout();
+            navigate("/login");
+          }}
+        >
+          Logout
+        </Button>
       </TopNav>
       {/* NOTE SIDEBAR */}
       <Side>
@@ -60,7 +74,6 @@ const AppLayout = () => {
       {/*  NOTE MAIN CONTENT */}
       <Main>
         <h4>Main</h4>
-        <br />
         <Outlet />
       </Main>
     </Shell>
