@@ -7,7 +7,7 @@ import PatientsPage from "../features/patients/PatientsPage";
 import AppointmentsPage from "../features/appointments/AppointmentsPage";
 import AuditPage from "../features/audit/AuditPage";
 
-const routes = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginPage />,
@@ -24,4 +24,4 @@ const routes = createBrowserRouter([
   },
 ]);
 
-export default routes;
+export default router;

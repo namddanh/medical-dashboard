@@ -35,8 +35,10 @@ const LinkItem = styled(NavLink)`
   border-bottom: 1px solid ${({ theme }) => theme.colors.muted};
   border-right: 1px solid ${({ theme }) => theme.colors.muted};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.danger} &.active {
-    background: rgba(255, 255, 255, 0.1);
+  background: ${({ theme }) => theme.colors.border};
+
+  &.active {
+    background: ${({ theme }) => theme.colors.surface};
   }
 `;
 
